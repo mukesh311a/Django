@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        
+ # Print only that item whose value is greater than 20 from the List items only if n is less than 20  
+    {% if list|length > 0 %} 
+        {% for n in list %}
+            {% if n > 30 %}
+        <div>{{n}}</div>
+            {% endif %}
+        {% endfor %}
+    {%  else  %}
+    No data to print
+    {% endif %}
+   </div>
+        <hr>
+        <div>         
+        {% if Mylist|length > 0 %} 
+            {% for n in Mylist %}
+                {% if n > 200 %}
+                   <div>{{n}}</div>
+                    {% endif %}
+             {% endfor %}
+               {%  else  %}
+            No data to print
+        {% endif %}
+        /div>
+
+
+    </body>
+</html>

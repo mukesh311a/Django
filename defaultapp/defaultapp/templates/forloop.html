@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div>
+   # How to fetch List contents using for loop
+    {% for n in list_of_programs %}
+    <div> {{forloop.counter0}}    {{n}}</div>
+    {% endfor %}
+   </div> 
+<hr>
+   <div>
+# First Method to fetch dictionary items using for loop
+    <hr>
+  </div>
+   {% for key, value in hotelservices.items %}
+   <li>{{key}} value {{value}}</li>
+ {% endfor %}
+   
+ <div>
+    <hr>
+    # Second Method to fetch dictioonary items is 
+    <table border="1" cellpadding ="10">
+        {% for key,value in hotelservices.items %}
+        <tr>
+        <td>{{key}} </td>
+        <td> {{value}}</td>
+        </tr>
+    {% endfor %}
+        </table>
+
+        <hr>
+
+        <hr>
+        # Third Method to fetch data itesm from list dictioonary items is 
+        <table border="1" cellpadding ="10">
+        <tr>
+            <th>Name</th>
+            <th>Owner</th>
+        </tr>
+        {% for key in listofhotels %}
+            <tr>
+            <td>{{key.name}} </td>
+            <td> {{key.owner}}</td>
+            </tr>
+        {% endfor %}
+            </table>
+   </body>
+</html>
